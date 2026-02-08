@@ -1,0 +1,368 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .brand img {
+    height: 46px;
+  }
+
+  .brand h1 {
+    font-size: 22px;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  width: 38px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brand span {
+  color: #2563eb;
+}
+
+/* Language Buttons */
+.lang-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #c7d2fe;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* =====================
+   HERO (PREMIUM)
+===================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #0ea5e9
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background logo watermark */
+.hero-bg-logo {
+  position: absolute;
+  width: 75%;
+  max-width: 700px;
+  opacity: 0.15;               /* more visible */
+  filter: none;               /* remove grayscale */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 2;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.hero-card h2 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.hero-card p {
+  font-size: 18px;
+  color: #e0e7ff;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 70px 0;
+}
+
+.gray {
+  background: #f8fafc;
+}
+
+.section h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+.section p {
+  max-width: 850px;
+  margin: 10px auto;
+  text-align: center;
+  color: #475569;
+}
+
+/* =====================
+   COURSES
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 26px 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+.card h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* =====================
+   GALLERY
+===================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+}
+
+/* =====================
+   WHY US
+===================== */
+.features {
+  max-width: 650px;
+  margin: 35px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  background: #ffffff;
+  margin-bottom: 14px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-weight: 500;
+  color: #334155;
+}
+
+/* =====================
+   FOOTER (STABLE)
+===================== */
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 60px 20px 30px;
+}
+
+.footer-box {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.owner-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  object-fit: cover;
+  margin: auto;
+}
+
+.owner h3 {
+  margin: 10px 0 4px;
+  color: #ffffff;
+}
+
+.role {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.divider {
+  width: 70px;
+  height: 3px;
+  background: #38bdf8;
+  margin: 25px auto;
+}
+
+.footer-info h4 {
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin-bottom: 22px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.08);
+  padding: 14px 16px;
+  border-radius: 12px;
+  max-width: 520px;
+  margin: auto;
+  text-align: left;
+}
+
+.info-item a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  margin-top: 28px;
+  font-size: 13px;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 14px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-card h2 {
+    font-size: 30px;
+  }
+
+  .hero-card p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+}
